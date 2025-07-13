@@ -1,7 +1,8 @@
-Automate AWS EC2 Instance Launch with Shell Script 🚀"
+**Automate AWS EC2 Instance Launch with Shell Script 🚀"**
 
 
-📜 Script Overview
+**📜 Script Overview**
+
 We’ll cover the following functions in the script:
 
 1️⃣ Check if AWS CLI is installed
@@ -13,8 +14,7 @@ We’ll cover the following functions in the script:
 4️⃣ Wait until the instance is in the running state
 
 
-
-✅ Step-by-Step Guide to Automate EC2 Launch Using Shell Script
+**✅ Step-by-Step Guide to Automate EC2 Launch Using Shell Script**
 
 
 📌 Prerequisites:
@@ -28,7 +28,9 @@ We’ll cover the following functions in the script:
 4️⃣A Unix-based system (Ubuntu, WSL, macOS, etc.)
 
 👉Steps:
-Step 1: Check if AWS CLI is Installed
+
+**Step 1: Check if AWS CLI is Installed**
+
 In the script, we use:
 
 🛠️ Install AWS CLI ( If Missing )
@@ -37,75 +39,75 @@ The script checks if AWS CLI is installed. If not, it installs AWS CLI v2 automa
 Manual Installation (Optional)
 Here’s how you can do it:
 
-Search on Internet:
+1. Search on Internet:
 Open your browser and type:
 👉 aws cli v2
 Hit enter.
 
-Visit the Official AWS Page:
+2. Visit the Official AWS Page:
 You’ll likely see the AWS documentation link at the top. Click the one that says something like:
 ✅ “Installing the AWS CLI version 2”
 
-Choose Your Operating System:
+3. Choose Your Operating System:
 Scroll down and find the section that matches your OS.
 For example, I’m using Linux, so I clicked the Linux tab.
 
-Follow the Linux Instructions:
+4. Follow the Linux Instructions:
 The page will give you the latest download link and step-by-step commands to install the AWS CLI v2.
 
 Here's the basic version if you’re using Ubuntu or WSL:
 
 
-Copy
+Copy COMMAND:
 
-Copy
  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
  sudo apt update && sudo apt install -y unzip
  unzip awscliv2.zip
  sudo ./aws/install
-Check the Installation:
+
+5. Check the Installation:
 After it finishes, you can check if it worked by running:
 
-
-Copy
-
-Copy
  aws --version
+ 
 You should see something like aws-cli/2.x.x confirming it's installed correctly.
 
-If you already have AWS CLI installed but you're not sure which version, just run:
+6. If you already have AWS CLI installed but you're not sure which version, just run:
 
-
-Copy
-
-Copy
  aws --version
+ 
 If it says version 2.x, you're good to go. If it's version 1.x, I highly recommend updating to version 2 — it has better support and newer features.
 
-🛠️ Step 2: Set Up AWS Credentials
+
+**🛠️ Step 2: Set Up AWS Credentials**
+
 Run the following command in terminal:
 
-
-Copy
-
-Copy
 aws configure
+
 It will ask for:
 
-AWS Access Key ID
+. AWS Access Key ID
 
-AWS Secret Access Key
+. AWS Secret Access Key
 
-Default Region (e.g. us-east-1)
+. Default Region (e.g. us-east-1)
 
-Default Output Format (e.g.json)
+. Default Output Format (e.g.json)
 
 👉 Steps :
 
 
+![a4d78bc3-a4e9-4664-8a59-e9cbfd1397c7](https://github.com/user-attachments/assets/c54357ac-da7f-4b97-8ba8-b3cd9749575a)
 
 
+![d467a360-03c2-4f3e-ae56-37e376e78e45](https://github.com/user-attachments/assets/a8444433-33ea-4aae-b328-694cf1364c87)
 
+
+![b710d1e9-5dd4-4d3c-b4ba-7cf9e1c99e9a](https://github.com/user-attachments/assets/59a83676-b842-4ffd-bf26-4cbc9b97e166)
+
+
+![d0ca2584-bd90-415e-bea7-8f287d8f4154](https://github.com/user-attachments/assets/ce0371dd-a9d4-43de-a645-4bcd5d7fa949)
 
 
 
@@ -113,7 +115,10 @@ copy your Access key & password and paste your terminal.
 
 also add region & output format ( your choice )
 
-🛠️ Step 3: Prepare EC2 Configuration
+
+
+**🛠️ Step 3: Prepare EC2 Configuration**
+
 Before running the script, make sure you have the following AWS values:
 
 ✅ AMI ID (e.g., Amazon Linux 2: ami-************)
@@ -130,24 +135,23 @@ Before running the script, make sure you have the following AWS values:
 
 👉 Steps :
 
+![b73b0a94-2c6c-4cf8-8b02-1562002bab7d](https://github.com/user-attachments/assets/a7aafa2c-af96-4d82-91ff-d0f4dac2fba4)
 
 
+![dfa87577-0d72-4f1c-abde-3f97941d5c8c](https://github.com/user-attachments/assets/1468292f-08f1-42f6-ab5d-d45560db950c)
 
-🛠️ Step 3: Run the EC2 Automation Script
+
+**🛠️ Step 4: Run the EC2 Automation Script**
 Save the script below as create_ec2.sh, make it executable, and run it:
 
 
-Copy
-
-Copy
 chmod +x create_ec2.sh  
 ./create_ec2.sh or bash create_ec2.sh
+
+
 📜 Full Script
 🔧 Complete Bash Script to Automate EC2 Instance Creation
 
-Copy
-
-Copy
 #!/bin/bash
 
 set -euo pipefail
@@ -258,71 +262,26 @@ main() {
  # Be sure this is here and not missing (Run the Script)
 
  main "$@"
-🔍 How the Script Works
-Checks for AWS CLI → Installs if missing.
 
-Launches an EC2 Instance → Uses run-instances with your config.
 
-Waits for Instance to Start → Confirms it’s running before proceeding.
+ 
+**🔍 How the Script Works**
 
+1. Checks for AWS CLI → Installs if missing.
+
+2. Launches an EC2 Instance → Uses run-instances with your config.
+
+3. Waits for Instance to Start → Confirms it’s running before proceeding.
+
+![d260174b-f7bf-40c8-a818-c9ff6d716dde (1)](https://github.com/user-attachments/assets/dca1a431-7825-4561-a5bd-1f252f335a4a)
 
 
 ✅ Instance Running successfully
 🎉 And That’s a Wrap!
+
 Congratulations—you’ve just leveled up your cloud automation game! 🚀 No more manual clicking, no more waiting… just you, a cup of coffee ☕, and a script that does the work while you relax.
 
 
 
 
 
-
-Subscribe to our newsletter
-Read articles from DevOps Diaries directly inside your inbox. Subscribe to the newsletter, and don't miss out.
-
-abhishek26w@gmail.com
-Subscribe
-Devops
-Linux
-DevOps Journey
-Devops articles
-shell script
-AWS
-ec2
-Ubuntu
- 
-Article Series
-
-Linux & SSH
-1
-Linux for Everyone
-Introduction to Linux Linux is an operating system (OS) that works like the brain of a computer. It …
-
-Linux for Everyone
-2
-"Master the Cloud: Set Up Your Ubuntu Linux EC2 Instance in 2 Minutes!"
-Creating an Ubuntu Linux EC2 Instance on AWS This tutorial guides you through launching an Ubuntu Li…
-
-"Master the Cloud: Set Up Your Ubuntu Linux EC2 Instance in 2 Minutes!"
-
-Show all 3 posts
-6
-🚀 Shell Scripting in DevOps
-Shell Scripting in DevOps Shell scripting automates repetitive tasks, an essential skill for DevOps …
-
-🚀 Shell Scripting in DevOps
-7
-Automate AWS EC2 Instance Launch with Shell Script 🚀"
-Have you ever wanted to spin up an EC2 instance without logging into the AWS Management Console? Whe…
-
-Automate AWS EC2 Instance Launch with   Shell Script 🚀"
-©2025 DevOps Diaries
-
-Archive
-·
-Privacy policy
-·
-Terms
-Powered by Hashnode - Build your developer hub.
-
-Start your blog
-Creat
