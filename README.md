@@ -4,17 +4,21 @@ Automate AWS EC2 Instance Launch with Shell Script 🚀"
 📜 Script Overview
 We’ll cover the following functions in the script:
 
-Check if AWS CLI is installed
+1️⃣ Check if AWS CLI is installed
 
-Install AWS CLI v2 (if not installed)
+2️⃣ Install AWS CLI v2 (if not installed)
 
-Create an EC2 instance
+3️⃣ Create an EC2 instance
 
-Wait until the instance is in the running state
+4️⃣ Wait until the instance is in the running state
+
+
 
 ✅ Step-by-Step Guide to Automate EC2 Launch Using Shell Script
 
+
 📌 Prerequisites:
+
 1️⃣An AWS account with IAM user and permissions to launch EC2.
 
 2️⃣AWS CLI installed configured (aws configure)
