@@ -13,14 +13,15 @@ Create an EC2 instance
 Wait until the instance is in the running state
 
 ✅ Step-by-Step Guide to Automate EC2 Launch Using Shell Script
+
 📌 Prerequisites:
-An AWS account with IAM user and permissions to launch EC2.
+1️⃣An AWS account with IAM user and permissions to launch EC2.
 
-AWS CLI installed configured (aws configure)
+2️⃣AWS CLI installed configured (aws configure)
 
-A Key Pair, Subnet ID, and Security Group ready.
+3️⃣A Key Pair, Subnet ID, and Security Group ready.
 
-A Unix-based system (Ubuntu, WSL, macOS, etc.)
+4️⃣A Unix-based system (Ubuntu, WSL, macOS, etc.)
 
 👉Steps:
 Step 1: Check if AWS CLI is Installed
