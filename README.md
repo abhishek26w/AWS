@@ -1,5 +1,7 @@
 Automate AWS EC2 Instance Launch with Shell Script 🚀"
 
+
+📜 Script Overview
 We’ll cover the following functions in the script:
 
 Check if AWS CLI is installed
@@ -17,8 +19,6 @@ An AWS account with IAM user and permissions to launch EC2.
 AWS CLI installed configured (aws configure)
 
 A Key Pair, Subnet ID, and Security Group ready.
-<img width="1920" height="1080" alt="Screenshot (534)" src="https://github.com/user-attachments/assets/a3454d76-2a69-4999-8d2b-f888dc260c21" />
-
 
 A Unix-based system (Ubuntu, WSL, macOS, etc.)
 
